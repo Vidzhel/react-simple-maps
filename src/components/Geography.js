@@ -1,6 +1,7 @@
 
 import React, { useState, memo } from "react"
 import PropTypes from "prop-types"
+import SVG from "react-native-svg" 
 
 const Geography = ({
   geography,
@@ -50,7 +51,7 @@ const Geography = ({
   }
 
   return (
-    <path
+    <SVG.Path
       tabIndex="0"
       className={`rsm-geography ${className}`}
       d={geography.svgPath}

@@ -54,7 +54,8 @@
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react-native-svg": "9.13.3"
   },
   "dependencies": {
     "d3-geo": "^1.11.9",
