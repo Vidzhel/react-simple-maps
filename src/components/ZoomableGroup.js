@@ -1,7 +1,7 @@
 
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import SVG from "react-native-svg" 
+import {G, Rect} from "react-native-svg" 
 
 import { MapContext } from "./MapProvider"
 import useZoomPan from "./useZoomPan"
@@ -36,10 +36,10 @@ const ZoomableGroup = ({
   })
 
   return (
-    <SVG.G ref={mapRef}>
-      <SVG.Rect width={width} height={height} fill="transparent" />
-      <SVG.G transform={transformString} className={`rsm-zoomable-group ${className}`} {...restProps} />
-    </SVG.G>
+    <G ref={mapRef}>
+      <Rect width={width} height={height} fill="transparent" />
+      <G transform={transformString} className={`rsm-zoomable-group ${className}`} {...restProps} />
+    </G>
   )
 }
 

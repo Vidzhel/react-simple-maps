@@ -1,7 +1,7 @@
 
 import React, { Fragment, memo, useMemo, useContext } from "react"
 import PropTypes from "prop-types"
-import SVG from "react-native-svg" 
+import {Defs, Path, ClipPath} from "react-native-svg" 
 
 import { MapContext } from "./MapProvider"
 
@@ -17,12 +17,12 @@ const Sphere = ({
   const spherePath = useMemo(() => path({ type: "Sphere" }), [path])
   return (
     <Fragment>
-      <SVG.Defs>
-        <clipPath id={id}>
-          <SVG.Path d={spherePath} />
-        </clipPath>
-      </SVG.Defs>
-      <SVG.Path
+      <Defs>
+        <ClipPath id={id}>
+          <Path d={spherePath} />
+        </ClipPath>
+      </Defs>
+      <Path
         d={spherePath}
         fill={fill}
         stroke={stroke}

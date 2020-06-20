@@ -1,7 +1,7 @@
 
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import SVG from "react-native-svg" 
+import {Path} from "react-native-svg" 
 
 import { MapContext } from "./MapProvider"
 
@@ -23,7 +23,7 @@ const Line = ({
   }
 
   return (
-    <SVG.Path
+    <Path
       d={path(lineData)}
       className={`rsm-line ${className}`}
       stroke={stroke}

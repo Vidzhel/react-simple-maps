@@ -1,7 +1,7 @@
 
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import SVG from "react-native-svg" 
+import {G} from "react-native-svg" 
 
 
 import { MapContext } from "./MapProvider"
@@ -18,12 +18,12 @@ const Geographies = ({
   const { geographies } = useGeographies({ geography, parseGeographies })
 
   return (
-    <SVG.G className={`rsm-geographies ${className}`} {...restProps}>
+    <G className={`rsm-geographies ${className}`} {...restProps}>
       {
         geographies && geographies.length > 0 &&
         children({ geographies, path, projection })
       }
-    </SVG.G>
+    </G>
   )
 }
 

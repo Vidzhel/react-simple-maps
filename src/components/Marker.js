@@ -1,7 +1,7 @@
 
 import React, { useContext, useState } from "react"
 import PropTypes from "prop-types"
-import SVG from "react-native-svg" 
+import {G} from "react-native-svg" 
 
 import { MapContext } from "./MapProvider"
 
@@ -57,7 +57,7 @@ const Marker = ({
   }
 
   return (
-    <SVG.G
+    <G
       transform={`translate(${x}, ${y})`}
       className={`rsm-marker ${className}`}
       onMouseEnter={handleMouseEnter}
@@ -70,7 +70,7 @@ const Marker = ({
       {...restProps}
     >
       {children}
-    </SVG.G>
+    </G>
   )
 }
 
